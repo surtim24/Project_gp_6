@@ -44,26 +44,26 @@ public class BlackJackGame extends Game {
             }
         };  
 
-        System.out.print("Enter number of rounds (1-5): ");
-        rounds = Integer.parseInt(scanner.nextLine());
-        if (rounds < 1 || rounds > 5) {
-            rounds = 5; 
-            System.out.println("Invalid number of rounds. Defaulting to 5 rounds.");
-        }
+//        System.out.print("Enter number of rounds (1-5): ");
+        rounds = 5;
+//        if (rounds < 1 || rounds > 5) {
+//            rounds = 5; 
+//            System.out.println("Invalid number of rounds. Defaulting to 5 rounds.");
+//        }
 
         System.out.println("Game Starting with " + playerName + " and Dealer!");
         
-        for (int round = 1; round <= rounds; round++) {
-            System.out.println("-- Round " + round + " --");
+//        for (int round = 1; round <= rounds; round++) {
+            System.out.println("-- Round " + rounds + " --");
             System.out.println("Your current balance: $" + playerBalance);
-            if (playerBalance==0){
-                    System.out.println(" Insufficent balance. Game will be Terminated");
-                 break;       
-                }
+//            if (playerBalance==0){
+//                    System.out.println(" Insufficent balance. Game will be Terminated");
+//                 break;       
+//                }
             placeBet(); // Allow player to place a bet
             
-            playRound(round);  
-        }
+            playRound(rounds);  
+        
         declareWinner();  
     }
 
